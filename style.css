@@ -16,7 +16,6 @@ header, footer{
     justify-content: space-between;
     margin: 0 30px;
     height: 100%;
-    border: 1px solid red;
 }
 
 .left-header{
@@ -30,8 +29,8 @@ header, footer{
 }
 
 #button{
-    width: 80px;
-    height: 25px;
+    width: 120px;
+    height: 30px;
     border-radius: 10px;
 }
 
@@ -45,17 +44,23 @@ main{
     height: calc(100vh - 200px); 
 }
 
-.main-container{
+#grid{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     width: 1100px;
     height: 1100px;
     margin: 0 auto;
+    padding: 40px 0;
 }
 
-.cell{
+#grid .cell{
     flex-basis: calc(1100px / 10);
     height: calc(1100px / 10);
-    border: 1px dashed blue;   
+    border: 1px dashed black;  
+    cursor: pointer;
+}
+
+#grid .cell.clicked{
+    background-color: dodgerblue;
 }
