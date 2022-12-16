@@ -72,21 +72,26 @@ const cols = 10;
 totalCells = rows * cols;
 // console.log(totalCells);
 
-// Dichiaro una funzione per creare la griglia composta da 100 celle.
-
-// Agganciare un event listenet al button
 
 // Apro un ciclo for per creare le celle-
 for (let i = 0; i < totalCells; i++) {
 
     const cell = createCell();
-
-    buttonElement.addEventListener('click', function() {
-      
-      gridElement.appendChild(cell);
-    })
     
+    // Agganciare un event listener al button.
+    buttonElement.addEventListener('click', function() {
+      gridElement.appendChild(cell);
+    
+    // Aggancio un event listener alle celle create.
+    cell.addEventListener('click', function() {
+      cell.classList.add('clicked');  
+
+    })
+
+})
+
 }
+
 
 
 
