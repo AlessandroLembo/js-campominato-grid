@@ -48,28 +48,38 @@ ANALISI:
 - Prendo l'elemento dalla pagina.
 - Dichiaro delle variabili che raccolgono il numero di colonne, 
   di righe e il totale delle celle.
+- Agganciare un event listener al button.  
 - Apro un ciclo for per creare le celle.    
 - Dichiaro una funzione per creare la griglia composta da 100 celle. 
 */
 
 // Prendere l'elemento dalla pagina.
 const gridElement = document.getElementById('grid');
+const buttonElement = document.getElementById('button');
+// console.log(gridElement, buttonElement);
 
 /* Dichiaro delle variabili che raccolgono il numero di colonne, 
    di righe e il totale delle celle. */
 const rows = 10;
 const cols = 10;
 totalCells = rows * cols;
-console.log(totalCells);
+// console.log(totalCells);
 
 // Dichiaro una funzione per creare la griglia composta da 100 celle.
-// Apro un ciclo for per creare le celle-
-for (let i = 0; i < totalCells; i++) {
-    const cell = document.createElement('div');
-    cell.classList.add('cell');
-    gridElement.appendChild(cell);
-    
-}
+
+// Agganciare un event listenet al button
+buttonElement.addEventListener('click', function(){
+
+    // Apro un ciclo for per creare le celle-
+    for (let i = 0; i < totalCells; i++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      gridElement.appendChild(cell);   
+    }
+
+})
+
+
 
 
 
