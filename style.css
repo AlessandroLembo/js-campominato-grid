@@ -56,8 +56,11 @@ main{
 #grid .cell{
     flex-basis: calc(1100px / 10);
     height: calc(1100px / 10);
-    border: 1px dashed black;  
+    border: 1px solid coral;  
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #grid .cell.clicked{

@@ -74,17 +74,19 @@ totalCells = rows * cols;
 
 
 // Apro un ciclo for per creare le celle-
-for (let i = 0; i < totalCells; i++) {
+for (let i = 1; i <= totalCells; i++) {
 
     const cell = createCell();
     
     // Agganciare un event listener al button.
     buttonElement.addEventListener('click', function() {
       gridElement.appendChild(cell);
+      cell.append(i);
     
     // Aggancio un event listener alle celle create.
     cell.addEventListener('click', function() {
       cell.classList.add('clicked');  
+      console.log(`Cella numero: ${i}`);
 
     })
 
