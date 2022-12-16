@@ -45,5 +45,6 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento
 ANALISI:
 
 1 - Prepariamo l'HTML ed il CSS per ottenere il risultato grafico.
+2 - 
 */
 
