@@ -45,22 +45,26 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento
 ANALISI:
 
 - Prepariamo l'HTML ed il CSS per ottenere il risultato grafico.
-- Prendo l'elemento dalla pagina.
+- Prendo gli elementi dalla pagina.
 - Dichiaro delle variabili che raccolgono il numero di colonne, 
   di righe e il totale delle celle.
+- Dichiaro una funzione per creare una cella. 
+- Apro un ciclo for per ripetere l'operazione 100 volte.
 - Agganciare un event listener al button.  
-- Apro un ciclo for per creare le celle.    
-- Dichiaro una funzione per creare la griglia composta da 100 celle. 
+- Aggancio un event listener alla cella creata.
+
 */
 
-// Dichiaro una funzione per creare la griglia composta da 100 celle.
+// Dichiaro una funzione per creare una cella.
 function createCell() {
   const cell = document.createElement('div');
   cell.classList.add('cell');
   return cell;
 }
 
-// Prendere l'elemento dalla pagina.
+function startGame()
+
+// Prendo gli elementi dalla pagina.
 const gridElement = document.getElementById('grid');
 const buttonElement = document.getElementById('button');
 // console.log(gridElement, buttonElement);
@@ -73,7 +77,7 @@ totalCells = rows * cols;
 // console.log(totalCells);
 
 
-// Apro un ciclo for per creare le celle-
+// Apro un ciclo for per ripetere l'operazione 100 volte.
 for (let i = 1; i <= totalCells; i++) {
 
     const cell = createCell();
@@ -83,7 +87,7 @@ for (let i = 1; i <= totalCells; i++) {
       gridElement.appendChild(cell);
       cell.append(i);
     
-    // Aggancio un event listener alle celle create.
+    // Aggancio un event listener alle cella creata creata.
     cell.addEventListener('click', function() {
       cell.classList.add('clicked');  
       console.log(`Cella numero: ${i}`);
