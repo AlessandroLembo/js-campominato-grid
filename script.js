@@ -44,7 +44,34 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento
 /*
 ANALISI:
 
-1 - Prepariamo l'HTML ed il CSS per ottenere il risultato grafico.
-2 - 
+- Prepariamo l'HTML ed il CSS per ottenere il risultato grafico.
+- Prendo l'elemento dalla pagina.
+- Dichiaro delle variabili che raccolgono il numero di colonne, 
+  di righe e il totale delle celle.
+- Apro un ciclo for per creare le celle.    
+- Dichiaro una funzione per creare la griglia composta da 100 celle. 
 */
+
+// Prendere l'elemento dalla pagina.
+const gridElement = document.getElementById('grid');
+
+/* Dichiaro delle variabili che raccolgono il numero di colonne, 
+   di righe e il totale delle celle. */
+const rows = 10;
+const cols = 10;
+totalCells = rows * cols;
+console.log(totalCells);
+
+// Dichiaro una funzione per creare la griglia composta da 100 celle.
+// Apro un ciclo for per creare le celle-
+for (let i = 0; i < totalCells; i++) {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    gridElement.appendChild(cell);
+    
+}
+
+
+
+
 
