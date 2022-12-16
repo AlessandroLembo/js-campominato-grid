@@ -59,15 +59,15 @@ ANALISI:
 function createCell() {
   const cell = document.createElement('div');
   cell.classList.add('cell');
+
   return cell;
 }
-
-function startGame()
 
 // Prendo gli elementi dalla pagina.
 const gridElement = document.getElementById('grid');
 const buttonElement = document.getElementById('button');
 // console.log(gridElement, buttonElement);
+
 
 /* Dichiaro delle variabili che raccolgono il numero di colonne, 
    di righe e il totale delle celle. */
@@ -86,7 +86,8 @@ for (let i = 1; i <= totalCells; i++) {
     buttonElement.addEventListener('click', function() {
       gridElement.appendChild(cell);
       cell.append(i);
-    
+
+      
     // Aggancio un event listener alle cella creata creata.
     cell.addEventListener('click', function() {
       cell.classList.add('clicked');  
