@@ -5,6 +5,57 @@
   box-sizing: border-box;
 }
 
-body{
-    background-color: aqua;
+header, footer{
+    background-color: whitesmoke;
+    height: 120px;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.left-header{
+    display: flex;
+    align-items: center;
+}
+
+.left-header img{
+    max-width: 100%;
+    margin-right: 1.5rem;
+}
+
+#button{
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.left-header h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+main{
+    background-color: aquamarine;
+    height: calc(100vh - 200px); 
+}
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 1100px;
+    height: 1100px;
+    margin: 0 auto;
+}
+
+.cell{
+    flex-basis: calc(1100px / 10);
+    height: calc(1100px / 10);
+    border: 1px dashed blue;   
 }
