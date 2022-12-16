@@ -53,6 +53,13 @@ ANALISI:
 - Dichiaro una funzione per creare la griglia composta da 100 celle. 
 */
 
+// Dichiaro una funzione per creare la griglia composta da 100 celle.
+function createCell() {
+  const cell = document.createElement('div');
+  cell.classList.add('cell');
+  return cell;
+}
+
 // Prendere l'elemento dalla pagina.
 const gridElement = document.getElementById('grid');
 const buttonElement = document.getElementById('button');
@@ -68,16 +75,20 @@ totalCells = rows * cols;
 // Dichiaro una funzione per creare la griglia composta da 100 celle.
 
 // Agganciare un event listenet al button
-buttonElement.addEventListener('click', function(){
 
-    // Apro un ciclo for per creare le celle-
-    for (let i = 0; i < totalCells; i++) {
-      const cell = document.createElement('div');
-      cell.classList.add('cell');
-      gridElement.appendChild(cell);   
-    }
+// Apro un ciclo for per creare le celle-
+for (let i = 0; i < totalCells; i++) {
 
-})
+    const cell = createCell();
+
+    buttonElement.addEventListener('click', function() {
+      
+      gridElement.appendChild(cell);
+    })
+    
+}
+
+
 
 
 
