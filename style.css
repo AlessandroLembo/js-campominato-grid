@@ -30,18 +30,32 @@ header, footer{
     margin-right: 1.5rem;
 }
 
+.left-header h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.right-header{
+    display: flex;
+    align-items: center;
+}
+
+.right-header label{
+    font-size: 25px;
+}
+
+#difficulty-level{
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
 #button{
     width: 120px;
     height: 30px;
     border-radius: 10px;
     cursor: pointer;
 }
-
-.left-header h1{
-    font-size: 40px;
-    font-weight: bold;
-}
-
 
 /* Main */
 main{

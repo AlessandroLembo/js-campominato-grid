@@ -67,7 +67,7 @@ const startPlay = createTitle();
    di righe e il totale delle celle. */
 const rows = 10;
 const cols = 10;
-totalCells = rows * cols;
+const totalCells = rows * cols;
 // console.log(totalCells);
 
 
