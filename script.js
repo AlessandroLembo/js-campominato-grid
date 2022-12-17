@@ -1,25 +1,7 @@
 console.log('JS OK');
 
+
 /*
-TRACCIA:
-
-L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
-Ogni cella ha un numero progressivo, da 1 a 100.
-Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro 
-ed emetto un messaggio in console con il numero della cella cliccata.
-MILESTONE 1
-Prepariamo l'HTML ed il CSS per ottenere il risultato grafico
-che vediamo nell'immagine allegata.
-MILESTONE 2
-Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS. 
-Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ciascuna.
-MILESTONE 3
-In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
-#MILESTONE 4
-Al click sulla cella, stampiamo il numero della cella cliccata in console, 
-poi coloriamo la cella d'azzurro!
-
 BONUS
 Aggiungere una select accanto al bottone di generazione, 
 che fornisca una scelta tra tre diversi livelli di difficoltà:
@@ -46,6 +28,7 @@ ANALISI:
 
 - Prepariamo l'HTML ed il CSS per ottenere il risultato grafico.
 - Prendo gli elementi dalla pagina.
+- Dichiaro una funzione per creare il titolo nella pagina.
 - Dichiaro delle variabili che raccolgono il numero di colonne, 
   di righe e il totale delle celle.
 - Dichiaro una funzione per creare una cella. 
@@ -66,7 +49,18 @@ function createCell() {
 // Prendo gli elementi dalla pagina.
 const gridElement = document.getElementById('grid');
 const buttonElement = document.getElementById('button');
-// console.log(gridElement, buttonElement);
+
+// Dichiaro una funzione per creare il titolo nella pagina.
+function createTitle() {
+  const titleText = document.createElement('h1');
+  const message = "Premi play ed inizia la partita";
+  titleText.append(message);
+  gridElement.append(titleText);
+  
+  return titleText;
+}
+
+const startPlay = createTitle();
 
 
 /* Dichiaro delle variabili che raccolgono il numero di colonne, 
@@ -81,21 +75,22 @@ totalCells = rows * cols;
 for (let i = 1; i <= totalCells; i++) {
 
     const cell = createCell();
-    
-    // Agganciare un event listener al button.
+
+    // Agganciare un event listener al button.  
     buttonElement.addEventListener('click', function() {
+      
+      startPlay.classList.add('d-none');
       gridElement.appendChild(cell);
       cell.append(i);
-
+    
+    })
       
-    // Aggancio un event listener alle cella creata creata.
+    // Aggancio un event listener alla cella creata.
     cell.addEventListener('click', function() {
       cell.classList.add('clicked');  
       console.log(`Cella numero: ${i}`);
 
     })
-
-})
 
 }
 
