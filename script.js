@@ -2,7 +2,7 @@ console.log('JS OK');
 
 
 /*
-BONUS
+BONUS 
 Aggiungere una select accanto al bottone di generazione, 
 che fornisca una scelta tra tre diversi livelli di difficoltà:
 - con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, 
@@ -49,6 +49,8 @@ function createCell() {
 // Prendo gli elementi dalla pagina.
 const gridElement = document.getElementById('grid');
 const buttonElement = document.getElementById('button');
+const difficultyLevelElement = document.getElementById('difficulty-level');
+// console.log(difficultyLevelElement);
 
 // Dichiaro una funzione per creare il titolo nella pagina.
 function createTitle() {
